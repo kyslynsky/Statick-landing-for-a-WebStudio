@@ -1,0 +1,33 @@
+.clients--spec {
+  padding: 94px 0px 94px 0px;
+}
+
+.clients__list {
+  display: flex;
+  margin: -15px;
+}
+
+.client__item {
+  margin: 15px;
+  flex-basis: calc(100% / 6 - 30px);
+}
+
+.client__icon {
+  @include centeredFlex; 
+  height: 92px;
+
+  fill: var(--clients-icon-color);
+  border: 1px solid var(--clients-icon-color);
+  border-radius: 4px;
+  outline: none;
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus { 
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+  }
+}

@@ -1,0 +1,16 @@
+body {
+  background: var(--primary-white);
+  color: var(--primary-text-color);
+  font-family: $primary-font;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
