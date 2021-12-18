@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-------------------------------- Навигация сайта ----------------------------------->
-<!-- 
+    <!-- 
     <header class="header">
       <div class="container header__container">
         <nav class="header__nav">
@@ -76,7 +76,7 @@
 
     <main>
       <!---------------------------------- Блок Герой ----------------------------------->
-<!-- 
+      <!-- 
       <section class="hero">
         <h1 class="hero__title">
           Эффективные решения <br />
@@ -153,7 +153,7 @@
       </section>
 
       <!----------------------------------- Примеры работ -------------------------------->
-<!-- 
+
       <section class="works works--spec">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
@@ -190,10 +190,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!------------------------------------ Команда ------------------------------------>
-<!--       
+
       <section class="team team-section--spec">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -202,10 +202,20 @@
             <li class="team__item">
               <div class="team-card">
                 <img
-                  src="./images/team1.jpg"
+                  srcset="
+                    ./images/team/1team450w.jpg 450w,
+                    ./images/team/1team900w.jpg 900w
+                  "
+                  src="./images/team/1team450w.jpg"
+                  sizes="(min-width: 768px) 50vw"
                   alt="портрет дизайнера продукта"
-                  width="270"
                 />
+                <!-- <img
+                    src="./images/team1.jpg"
+                    alt="портрет дизайнера продукта"
+                    width="270"
+                  /> -->
+
                 <div class="team-card__desc">
                   <h3 class="team-card__member">Игорь Демьяненко</h3>
                   <p class="team-card__profession">Product Designer</p>
@@ -263,9 +273,13 @@
             <li class="team__item">
               <div class="team-card">
                 <img
-                  src="./images/team2.jpg"
+                  srcset="
+                    ./images/team/2team450w.jpg 450w,
+                    ./images/team/2team900w.jpg 900w
+                  "
+                  src="./images/team/2team450w.jpg"
+                  sizes="(min-width: 768px) 50vw"
                   alt="портрет разработчика"
-                  width="270"
                 />
                 <div class="team-card__desc">
                   <h3 class="team-card__member">Ольга Репина</h3>
@@ -324,10 +338,15 @@
             <li class="team__item">
               <div class="team-card">
                 <img
-                  src="./images/team3.jpg"
+                  srcset="
+                    ./images/team/3team450w.jpg 450w,
+                    ./images/team/3team900w.jpg 900w
+                  "
+                  src="./images/team/3team450w.jpg"
+                  sizes="(min-width: 768px) 50vw"
                   alt="портрет маркетолога"
-                  width="270"
                 />
+
                 <div class="team-card__desc">
                   <h3 class="team-card__member">Николай Тарасов</h3>
                   <p class="team-card__profession">Marketing</p>
@@ -385,10 +404,15 @@
             <li class="team__item">
               <div class="team-card">
                 <img
-                  src="./images/team4.jpg"
+                  srcset="
+                    ./images/team/4team450w.jpg 450w,
+                    ./images/team/4team900w.jpg 900w
+                  "
+                  src="./images/team/4team450w.jpg"
+                  sizes="(min-width: 768px) 50vw"
                   alt="портрет архитектора"
-                  width="270"
                 />
+                
                 <div class="team-card__desc">
                   <h3 class="team-card__member">Михаил Ермаков</h3>
                   <p class="team-card__profession">UI Designer</p>
@@ -444,10 +468,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!------------------------------------ Постоянные клиенты ------------------------->
-<!-- 
+      <!-- 
       <section class="clients clients--spec">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -506,7 +530,7 @@
     </main>
 
     <!------------------------------------------ Футер ----------------------------------->
-<!--     
+    <!--     
     <footer class="footer footer--spec">
       <div class="container">
         <div class="footer--flex">
@@ -627,9 +651,7 @@
 
         <form action="" class="modal-form" autocomplete="on">
           <div class="modal-form__field">
-            <label class="modal-form__label" for="username" 
-              >Имя</label
-            >
+            <label class="modal-form__label" for="username">Имя</label>
             <input
               class="modal-form__input"
               type="text"
@@ -643,9 +665,7 @@
           </div>
 
           <div class="modal-form__field">
-            <label class="modal-form__label" for="tel" 
-              >Телефон</label
-            >
+            <label class="modal-form__label" for="tel">Телефон</label>
             <input
               class="modal-form__input"
               type="tel"
@@ -659,19 +679,20 @@
           </div>
 
           <div class="modal-form__field">
-            <label class="modal-form__label" for="mail" 
-              >Почта</label
-            >
-            <input class="modal-form__input" type="email" name="mail" id="mail" />
+            <label class="modal-form__label" for="mail">Почта</label>
+            <input
+              class="modal-form__input"
+              type="email"
+              name="mail"
+              id="mail"
+            />
             <svg class="modal-form__icon">
               <use href="./images/icons.svg#email"></use>
             </svg>
           </div>
 
           <div class="modal-form__field">
-            <label class="modal-form__label" for="comment"
-              >Комментарий</label
-            >
+            <label class="modal-form__label" for="comment">Комментарий</label>
             <textarea
               class="modal-form__comment-input"
               name="comment"
@@ -681,7 +702,11 @@
           </div>
 
           <label class="modal-form__checkbox-label">
-            <input class="modal-form__checkbox visually-hidden" type="checkbox" name="privacy-policy" />
+            <input
+              class="modal-form__checkbox visually-hidden"
+              type="checkbox"
+              name="privacy-policy"
+            />
             <span class="modal-form__checkbox-icon"></span>
             Соглашаюсь с рассылкой и принимаю
             <a class="modal-form__policy-link" href="">Условия договора</a>
