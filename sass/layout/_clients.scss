@@ -1,19 +1,35 @@
 .clients--spec {
-  padding: 94px 0px 94px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px 94px 0px;
+  }
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   margin: -15px;
+
+  
 }
 
 .client__item {
   margin: 15px;
-  flex-basis: calc(100% / 6 - 30px);
+  flex-basis: calc(100% / 2 - 30px);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .client__icon {
-  @include centeredFlex; 
+  @include centeredFlex;
   height: 92px;
 
   fill: var(--clients-icon-color);
@@ -26,8 +42,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
-  &:focus { 
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
   }
 }

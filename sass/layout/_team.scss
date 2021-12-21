@@ -65,13 +65,17 @@
   line-height: 1.19;
 }
 
-// .social__item:not(:last-child) {
-//   margin-right: 10px;
-// }
-
 .social__list {
   @include centeredFlex;
-  padding: 0px 32px 32px 30px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 24px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social__link {
