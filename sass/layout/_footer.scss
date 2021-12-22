@@ -17,6 +17,7 @@
   @media (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-start;
   }
 
   @media screen and (min-width: 1200px) {
@@ -46,16 +47,24 @@
 
 .footer__link {
   display: block;
-  margin-top: 9px;
+  margin-top: 8px;
 
   color: var(--footer-contacts);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 9px;
+  }
 }
 
 .footer-social {
+  @media screen and (max-width: 767px) {
+    margin: 60px 0 60px 0;
+  }
+
   @media screen and (max-width: 1200px) {
     text-align: center;
   }
@@ -119,10 +128,15 @@
   @media screen and (max-width: 480px) {
     width: 100%;
   }
+
+  @media (min-width: 480px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 
 .footer-form__input {
   height: 50px;
+  margin-bottom: 20px;
   padding: 15px 16px;
 
   font-size: 16px;
@@ -159,6 +173,7 @@
   @media screen and (min-width: 1200px) {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0px;
   }
 }
 
