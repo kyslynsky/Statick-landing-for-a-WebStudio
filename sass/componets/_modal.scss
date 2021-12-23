@@ -26,9 +26,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: 528px;
-  min-height: 581px;
   padding: 40px;
 
   background-color: var(--primary-white);
@@ -38,6 +35,21 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 550ms;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
+
+  @media screen and (max-width: 479px) {
+    max-width: 98vw;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    min-height: 609px;
+  }
 }
 
 .modal__btn-close {
@@ -164,14 +176,20 @@
   .modal-form__checkbox:checked + & {
     border-color: var(--accent-color);
     background-color: var(--accent-color);
-    background-image: url(../images/iconcheck.svg);
+    background-image: url(../images/svg/iconcheck.svg);
     background-size: contain;
     background-position: center;
     background-origin: border-box;
   }
 }
 
+.modal-form__policy-text {
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
 .modal-form__policy-link {
   color: var(--accent-color);
-  margin-left: 5px;
 }
